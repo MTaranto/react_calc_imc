@@ -1,0 +1,136 @@
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 40px auto;
+  max-width: 900px;
+}
+.pLink {
+  font-size: 11px;
+  color: #999;
+  font-weight: 700;
+  margin-left: 5px;
+}
+a {
+  color: #999;
+  text-decoration: none;
+}
+.container {
+  display: flex;
+  max-width: 900px;
+  margin: auto;
+}
+.main {
+  padding-bottom: 50px;
+}
+.leftSide {
+  flex: 1;
+  margin-right: 40px;
+}
+.rightSide {
+  flex: 1;
+  margin-left: 40px;
+  display: flex;
+}
+.pIMC {
+  text-align: justify;
+  color: #6a7d8b;
+  margin-bottom: 40px;
+}
+h1 {
+  font-size: 40px;
+  margin: 0;
+  color: #3a4b5c;
+}
+input {
+  width: 100%;
+  margin-bottom: 30px;
+  line-height: 2em;
+  box-shadow: inset 2px 2px 2px #999;
+  background-color: #eee;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+input:disabled {
+  opacity: .5;
+}
+button {
+  background-color: #227c9d;
+  color: #fff;
+  font-size: 15px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  height: 2.5em;
+  cursor: pointer;
+}
+button:hover {
+  opacity: .8;
+  transition: all ease .3s;
+}
+button:disabled {
+  opacity: .5;
+  cursor: auto;
+}
+.grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.rightBig {
+  flex: 1;
+  display: flex;
+}
+.rightArrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  margin-left: -35px;
+  margin-top: 130px;
+  background-color: #227c9d;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.rightArrow:hover {
+  background-color: #47a3c5;
+  transition: all ease .3s;
+}
+@media (max-width: 770px) {
+  header {
+    padding: 0 40px;
+  }
+  .container {
+    padding: 0 40px;
+    flex-direction: column;
+  }
+  .leftSide {
+    margin-right: 0;
+  }
+  .rightSide {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+  .rightArrow {
+    margin-left: 0;
+    margin-top: 0;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 430px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .rightArrow {
+    width: 50px;
+    height: 50px;
+  }
+}
